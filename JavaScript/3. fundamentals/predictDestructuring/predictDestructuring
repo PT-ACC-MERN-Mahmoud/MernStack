@@ -1,0 +1,80 @@
+const cars = ['Tesla', 'Mercedes', 'Honda']
+const [randomCar] = cars
+const [,otherRandomCar] = cars
+    console.log(randomCar)
+    console.log(otherRandomCar);
+
+    //predictions OUTPUT1: ["Tesla", 'Mercedes', 'Honda']
+    //predictions OUTPUT2: ["Mercedes", 'Honda']
+
+    //actual OUTPUT1: Tesla
+    //actual OUTPUT2: Mercedes
+
+const employee = {
+    name: 'Elon',
+    age: 47,
+    company: 'Tesla'
+}
+const {name: otherName} = employee;
+//console.log(name); 
+console.log(otherName);
+    
+//predictions OUTPUT1: error as name should be undefined
+//predictions OUTPUT2: Elon
+    
+//actual OUTPUT1: undefined
+//actual OUTPUT2: Elon
+
+const person = {
+    name: 'Phil Smith',
+    age: 47,
+    height: '6 freet'
+}
+const password = 12345; 
+const {password: hashedPassword} = person;
+    console.log(password)
+    console.log(hashedPassword);
+
+    //predictions OUTPUT1: 12345
+    //predictions OUTPUT2: 12345 beacuse syntrax for destructuring is proper;
+
+    //actual OUTPUT1: 12345
+    //actual OUTPUT2: undefined
+
+const numbers = [8,2,3,5,6,1,67,12,2];
+const [,first] = numbers;
+const [,,,second] = numbers;
+const [,,,,,,,,third] = numbers;
+    console.log(first == second);
+    console.log(first == third);
+
+    //predictions OUTPUT1: false
+    //predictions OUTPUT2: true
+
+    //actual OUTPUT1: false
+    //actual OUTPUT2: true
+
+const lastTest = {
+    key: 'value',
+    secondKey: [8,2,3,5,6,1,67,12,2]
+}
+const {key} = lastTest;
+const {secondKey} = lastTest;
+const [,willThisWork] = secondKey;
+    console.log(key)
+    console.log(secondKey);
+    console.log(secondKey[0]);
+    console.log(willThisWork);
+
+    
+    //predictions OUTPUT1: value
+    //predictions OUTPUT2: 8,2,3,5,6,1,67,12,2
+    //predictions OUTPUT3: 8
+    //predictions OUTPUT4: 2
+    
+    //actual OUTPUT1: value
+    //actual OUTPUT2: 8,2,3,5,6,1,67,12,2
+    //actual OUTPUT3: 8
+    //actual OUTPUT4: 2
+
+

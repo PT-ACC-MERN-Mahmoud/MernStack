@@ -1,0 +1,11 @@
+Model Information:
+* title:	Village_Personal Assets
+* source:	https://sketchfab.com/3d-models/village-personal-assets-9b1959fdbc774d65b75e62069bd82b19
+* author:	jakekieferwaddington (https://sketchfab.com/jakekieferwaddington)
+
+Model License:
+* license type:	CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
+* requirements:	Author must be credited. Commercial use is allowed.
+
+If you use this 3D model in your project be sure to copy paste this credit wherever you share it:
+This work is based on "Village_Personal Assets" (https://sketchfab.com/3d-models/village-personal-assets-9b1959fdbc774d65b75e62069bd82b19) by jakekieferwaddington (https://sketchfab.com/jakekieferwaddington) licensed under CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)

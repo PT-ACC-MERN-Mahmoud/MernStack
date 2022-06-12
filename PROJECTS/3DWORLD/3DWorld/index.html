@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+    <link rel="stylesheet" type="text/css" href="style.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Parliament</title>
+  </head>
+  
+  <body>
+    <script src="three.min.js"></script> 
+    <script src="orbitControl.js"></script>
+    <script>
+    
+            let scene, camera, renderer; //setting variables for scene, camera, renderer
+
+        function init() { //init function with scene and camera and renderer constructors
+          scene = new THREE.Scene;
+          camera = new THREE.PerspectiveCamera(55, window.innerWidth/window.innerHeight, 45, 30000); //What do these params mean?
+          camera.position.set(-900, -200, -900); //what does there params mean?
+          renderer = new THREE.WebGLRenderer({antialias:true}); //renderer by new THREE.WebGLRender
+          renderer.setSize(window.innerWidth, window.innerHeight); //Setting fullscreen
+          document.body.appendChild(renderer.domElement); // appending the renderer to the html's body
+          
+          let controls = new THREE.OrbitControls(camera); //OrbitControl
+          controls.addEventListener('change', renderer); //on scroll
+          //controls.minDistance = 500; //
+          //controls.maxDistance = 1500; // so as to not break the skybox 
+
+
+          //boxGeometry = THREE.TextureLoader().load(pic); + materialArray.push(new THREE.MeshBasicMaterial
+          let materialArray = [];
+          let texture_ft = new THREE.TextureLoader().load('raspberry_ft.jpg'); //THREE.textureLoader().load("posy")
+          let texture_bk = new THREE.TextureLoader().load('raspberry_bk.jpg');
+          let texture_up = new THREE.TextureLoader().load('raspberry_up.jpg');
+          let texture_dn = new THREE.TextureLoader().load('raspberry_dn.jpg');
+          let texture_rt = new THREE.TextureLoader().load('raspberry_rt.jpg');
+          let texture_lf = new THREE.TextureLoader().load('raspberry_lf.jpg');
+
+          materialArray.push(new THREE.MeshBasicMaterial({map: texture_ft})); //THREE.MeshBasicMaterial
+          materialArray.push(new THREE.MeshBasicMaterial({map: texture_bk}));
+          materialArray.push(new THREE.MeshBasicMaterial({map: texture_up}));
+          materialArray.push(new THREE.MeshBasicMaterial({map: texture_dn}));
+          materialArray.push(new THREE.MeshBasicMaterial({map: texture_rt}));
+          materialArray.push(new THREE.MeshBasicMaterial({map: texture_lf}));
+          
+
+          let skyboxGeo = new THREE.BoxGeometry(10000, 10000, 10000);
+          let skybox = new THREE.Mesh(skyboxGeo, materialArray);
+          scene.add(skybox);
+            
+        
+          
+            animate();
+        }  
+          function animate() { 
+            renderer.render(scene, camera);
+            requestAnimationFrame(animate);
+        }
+        <div id="app"></div>
+          init();
+      </script>
+  </body>
+</html>

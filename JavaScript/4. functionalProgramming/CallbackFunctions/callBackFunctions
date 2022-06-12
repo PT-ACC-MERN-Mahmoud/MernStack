@@ -1,0 +1,33 @@
+// setTimeout( function() {
+//     console.log("start")
+// }, 3000 );
+
+// console.log("end")             //very useful piece of codalars
+
+>typeof("hello");
+'string'
+>typeof( function() {} );
+'function'
+
+//we set a function to a variable and then call it with the variable name
+var exampleFunction = function(message){
+    console.log( message ); 
+};
+exampleFunction("Hello from example function");
+
+//We can also pass in a function into another as a parameter
+function parentFunction( callback ) {
+    callback( " information from the parent function " );
+
+
+parentFunction( exampleFunction );
+}
+
+parentFunction( function(message) {
+    console.log( message );
+});
+
+
+//In functional programming, we see that functions can be used with the same agility as a variable. 
+
+//Why does this callback function print to console so many times
