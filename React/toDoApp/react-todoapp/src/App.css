@@ -8,7 +8,7 @@
 }
 
 body {
-  
+  background-color: #5d0cff;
 }
 .todo-app {
   display: flex;
@@ -41,7 +41,7 @@ h1 {
 .todo-input {
   padding: 14px 32px 14px 16px;
   border-radius: 4px 0 0 4px;
-  border: 2px solid #5d0cff;
+  border: 2px solid #fff;
   outline: none;
   width: 320px;
   background: transparent;
@@ -110,7 +110,7 @@ h1 {
   .todo-input {
     padding: 14px 32px 14px 16px;
     border-radius: 4px 0 0 4px;
-    border: 2px solid #5d0cff;
+    border: 2px solid #e2e2e2;
     outline: none;
     width: 320px;
     background: transparent;
@@ -209,12 +209,6 @@ h1 {
 }
 
 .App-header {
-  background-image: url('./daytime.jpg');
-  height:100vh;
-  margin-top: -70px;  
-  font-Size: 50px;
-  background-Size: 'contain';
-  background-Repeat: 'no-repeat';
   
 }
 
