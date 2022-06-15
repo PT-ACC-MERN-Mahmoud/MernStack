@@ -25,9 +25,9 @@ function App() {
         lastName={"Smith"}
         Age={50}
         hairColor={"Brown"}/>
+      <button onClick={() => alert('This button has beeen clicked!') }>Click</button>
     </div>
   );
-
 }
 
 
