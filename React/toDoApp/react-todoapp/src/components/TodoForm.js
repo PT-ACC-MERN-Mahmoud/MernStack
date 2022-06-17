@@ -29,7 +29,7 @@ const handleSubmit = e => {    //what is e
             {props.edit ? (
             <>
             <input
-                placeholder='Update yoou item' 
+                placeholder='Update your item' 
                 value={input}
                 onChange={handleChange}
                 name='text' 
@@ -76,4 +76,4 @@ export default TodoForm;
 //     f. addform
 // 3. Export ToDoForm
 
-        
+
